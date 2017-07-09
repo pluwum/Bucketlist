@@ -1,0 +1,85 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.header , .footer {
+	background: #6fcce2;
+	display: block;
+	height: 40px;
+	margin-bottom: 20px;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+.logo img {
+    height: 170px;
+	float: left;
+}
+.app-name {
+	padding: 90px 0px 0px 346px;
+	font-size: -webkit-xxx-large;
+}
+.form-container {
+	width: 30%;
+	font-size: large;
+	margin: 0 auto;
+}
+form {
+	#margin-bottom: 240px;
+}
+.login-detail {
+	margin-bottom: 10px;
+	margin-top: 60px;
+}
+.user, .pass{
+	margin-bottom: 7px;
+	margin-top: 7px;
+}
+body {
+	height: 100%;
+	position: relative;
+}
+.create a {
+	display: block;
+	float: right;
+}
+.create-bucklist {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+
+/***********************************************menu*********************************************/
+
+.main-menu {
+	position: absolute;
+	top: 280px;
+	left: 20px;
+}
+
+.main-menu li {
+	list-style: none;
+}
+
+.main-menu a {
+	display: block;
+}
