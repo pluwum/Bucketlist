@@ -112,9 +112,10 @@ body .container {
   height: 600px;
   background: rgba(255, 255, 251, 0.81);
   /***************************************login********************************************/
+  /***********************************users*************************************************/
 }
 /* line 48, ../sass/screen.scss */
-body .container form {
+body .container form.login {
   width: 40%;
   padding: 20px 0px;
   margin: 134px auto;
@@ -124,12 +125,12 @@ body .container form {
   background: white;
 }
 /* line 56, ../sass/screen.scss */
-body .container form .form-label {
+body .container form.login .form-label {
   padding: 20px 0px;
   font-size: 20px;
 }
 /* line 60, ../sass/screen.scss */
-body .container form input {
+body .container form.login input {
   width: 50%;
   margin: 10px;
 }
