@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <form action="/login" method="POST">
+        <div class="login-detail">
+            Please login:
+        </div>
+        <input placeholder="Enter Username" type="textbox" name="username" id="username" class="user"/>
+        <input placeholder="Enter Your Password" type="password" name="password" id="password" class="pass"/>
+        <button type="submit" class="btn btn-sm btn-danger">Submit</button>
+    </form>
+</div>
+{% endblock %}

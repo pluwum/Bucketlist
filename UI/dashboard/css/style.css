@@ -39,7 +39,7 @@ html[xmlns] .clearfix {
 	margin: 0 auto;
 }
 form {
-	margin-bottom: 240px;
+	#margin-bottom: 240px;
 }
 .login-detail {
 	margin-bottom: 10px;
@@ -51,4 +51,35 @@ form {
 }
 body {
 	height: 100%;
+	position: relative;
+}
+.create a {
+	display: block;
+	float: right;
+}
+.create-bucklist {
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+
+/***********************************************menu*********************************************/
+
+.main-menu {
+	position: absolute;
+	top: 280px;
+	left: 20px;
+}
+
+.main-menu li {
+	list-style: none;
+}
+
+.main-menu a {
+	display: block;
 }

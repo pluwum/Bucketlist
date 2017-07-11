@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main-menu">
+	<ul>
+		<li><a class="btn btn-primary btn-group-vertical" href="#">Bucket Lists</a></li>
+		<li><a class="btn btn-primary btn-group-vertical" href="#">Bucket List Items</a></li>
+		<li><a class="btn btn-primary btn-group-vertical" href="#">Users</a></li>
+	</ul>
+</div>
+<div class="container create-bucklist">
+	<div class="clearfix">
+		<a class="create" href="#">Create new bucklist</a>
+	</div>
+</div>
+
+<div class="container ">
+	<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Bucket list name</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Example 1</td>
+                <td><a href="#">View</a></td>
+                <td><a href="#">Edit</a></td>
+                <td><a href="#">Update</a></td>
+                <td><a href="#">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

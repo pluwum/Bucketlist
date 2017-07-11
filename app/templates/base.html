@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }} - Dream Bucket List </title>
+    {% else %}
+    <title>Welcome to the Dream Bucket List</title>
+    {% endif %}
+    <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap-responsive.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container"></div>
+    <!--<div>Dream Bucket List: <a href="/index">Home</a></div>-->
+    <div class="container">
+		<div class="clearfix">
+			<div class="logo"><img src="{{ url_for('static',filename='img/capture.png')}}"/></div>
+			<div class="app-name">Dream Bucket list Tracker</div>
+		</div>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="footer"></div>
+</body>
+</html>
