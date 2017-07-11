@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, request, session, abort
+from flask import render_template, flash, redirect, request, abort
 from app import app
 import os
 
@@ -7,11 +7,9 @@ import os
 @app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if not session.get('logged_in'):
         return render_template('login.html',
                            title='Sign In')
-    else:
-        bucketlist()
+
 
 
 @app.route('/bucketlist')
