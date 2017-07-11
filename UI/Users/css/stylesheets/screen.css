@@ -170,11 +170,15 @@ body .container .page-title {
   border-radius: 20px;
 }
 /* line 99, ../sass/screen.scss */
+body .container .sign-up {
+  margin-top: 20px;
+}
+/* line 102, ../sass/screen.scss */
 body .container .users {
   background: white;
   padding: 20px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 body .container .users .page-title {
   font-size: 20px;
   padding: 20px 20px;
