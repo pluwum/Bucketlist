@@ -1,0 +1,48 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body {
+	background: url(img/background.jpg) no-repeat no-repeat;
+	.header {
+		display: block;
+		height: 70px;
+		background: #fff;
+		border-radius: 5px;
+		.center_strip {
+			width: 65%;
+			margin: 0 auto;
+			height: 100%;
+			opacity: 1;
+			background: white;
+			border-radius: 5px;
+			
+			.logo {
+				height: 100%;
+				background: url(img/bucket.png) no-repeat no-repeat;
+				background-size: auto 100% ;
+				width: 100px;
+				float: left;
+			}
+			.app_name {
+				font-size: 38px;
+				line-height: 58px;
+				margin-left: 100px;
+				//text-align: center;
+				font-family: 'Lobster', cursive;
+			}
+		}
+	}
+	.container {
+		display: block;
+		width: 65%;
+		margin: 20px auto;
+		border-radius: 10px;
+		background: #fff;
+		height: 600px;
+		opacity: 0.8;
+	}
+}
