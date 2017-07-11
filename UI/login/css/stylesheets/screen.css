@@ -134,3 +134,7 @@ body .container form.login input {
   width: 50%;
   margin: 10px;
 }
+/* line 64, ../sass/screen.scss */
+body .container form.login .form-label2 {
+  padding-top: 30px;
+}
