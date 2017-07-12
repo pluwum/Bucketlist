@@ -5,6 +5,7 @@ from .bucketlist.bucket_list_app import BucketListApp
 start_app = BucketListApp()
 app.secret_key = 'F12Zr47j3yX R~X@H!jmM]Lwf/,?KT'
 
+
 @app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -45,5 +46,12 @@ def home():
 def sign_out():
     if start_app.current_user is not None:
         start_app.sign_out()
-        redirect(url_for('login'))
-    redirect(url_for('login'))
+        return redirect(url_for('login'))
+    return redirect(url_for('login'))
+
+
+@app.route('/create_bucketlist', methods=['GET'])
+def create_bucketlist():
+    if start_app.current_user is not None:
+        return render_template('create-bucketlist.html')
+    return redirect(url_for('login'))
