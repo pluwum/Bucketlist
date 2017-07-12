@@ -4,9 +4,7 @@ import unittest
 
 class ItemTestCases(unittest.TestCase):
     def setUp(self):
-        name = "Go to Bahamas"
-        description = "To go to the Bahamas to see what's up."
-        self.item1 = Item(name, description)
+        self.item1 = Item("Go to Bahamas", "To go to the Bahamas to see what's up.")
 
     def test_for_default_progress(self):
         self.assertFalse(self.item1.progress, msg="The default progress is wrong.")
@@ -15,15 +13,13 @@ class ItemTestCases(unittest.TestCase):
 class BucketListTestCase(unittest.TestCase):
     def setUp(self):
         self.exampleBucketList = BucketList('Africa')
+        self.exampleBucketList.add_bucket_list_item('Tokyo', "Am going to Tokyo this year.")
 
     def test_BucketList_class(self):
         self.assertEqual(type(self.exampleBucketList.name), str,
                          msg="The class doesn't exist")
 
     def test_for_adding_item(self):
-        name= 'Tokyo'
-        description = "Am going to Tokyo this year."
-        self.exampleBucketList.add_bucket_list_item(name, description)
         self.assertEqual(len(self.exampleBucketList.item_list), 1,
                          msg="The item is not being added properly")
 
@@ -58,6 +54,13 @@ class UserTestCase(unittest.TestCase):
         self.example_user.add_new_bucket_list("Growth")
         self.assertEqual(len(self.example_user.bucket_lists), 1,
                          msg="New Bucket list has been added.")
+
+    def test_view_bucketlist(self):
+        example1 = self.example_user.view_bucket_list('Growth')
+        self.assertEqual(example1.name, 'Growth', msg="Unable to view the bucket list")
+
+    def test_edit_bucketlist(self):
+        pass
 
 
 if __name__ == '__main__':

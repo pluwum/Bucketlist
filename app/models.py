@@ -6,10 +6,10 @@ class Item(object):
 
 
 class BucketList(object):
-    item_list = []
 
     def __init__(self, name):
         self.name = name
+        self.item_list = []
 
     def add_bucket_list_item(self, item_name, description):
         item1 = Item(item_name, description)
@@ -34,14 +34,19 @@ class BucketList(object):
 
 
 class User(object):
-    bucket_lists = []
 
     def __init__(self, fname, sname, email, password):
         self.fname = fname
         self.sname = sname
         self.email = email
         self.password = password
+        self.bucket_lists = []
 
     def add_new_bucket_list(self,bucket_list_name):
         new_bucket_list = BucketList(bucket_list_name)
         self.bucket_lists.append(new_bucket_list)
+
+    def view_bucket_list(self, bucket_name):
+        for obj in self.bucket_lists:
+            if obj.name == bucket_name:
+                return obj
