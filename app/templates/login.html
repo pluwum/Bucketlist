@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="form-container">
-    <form action="/login" method="POST">
-        <div class="login-detail">
-            Please login:
-        </div>
-        <input placeholder="Enter Username" type="textbox" name="username" id="username" class="user"/>
-        <input placeholder="Enter Your Password" type="password" name="password" id="password" class="pass"/>
-        <button type="submit" class="btn btn-sm btn-danger">Submit</button>
-    </form>
-</div>
+<form action="/login" method="POST" class="login">
+    <div class="form-label">
+        Please Login:
+    </div>
+        <input name = "email" class="form-control" type="text" placeholder="Enter Your Email Address"/><br>
+        <input name="password" class="form-control ps" type="password" placeholder="Enter Your Password"/><br>
+        <button class="btn btn-danger" type="submit">Submit</button>
+    <div class="form-label2">
+        Have no account?<br><br>
+    <a href="/register" class="btn btn-success">Sign Up</a>
+    </div>
+</form>
 {% endblock %}
