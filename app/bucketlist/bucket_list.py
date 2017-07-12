@@ -9,18 +9,22 @@ class BucketList(object):
         self.item_list = []
 
     def add_bucket_list_item(self, item_name, description):
+        """Method for adding a new bucket list item """
         item1 = Item(item_name, description)
         self.item_list.append(item1)
 
     def view_bucket_list_item(self, name):
+        """Method for viewing a bucket list item."""
         for obj in self.item_list:
             if obj.name == name:
                 return obj
 
     def edit_bucket_list_item(self):
+        """Method for editing a bucket list item"""
         pass
 
     def delete_bucket_list_item(self, name):
+        """Method for deleting a bucket list item"""
         for obj in self.item_list:
             if obj.name == name:
                 self.item_list.remove(obj)
