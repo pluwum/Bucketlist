@@ -7,6 +7,7 @@ class BucketList(object):
     def __init__(self, name):
         self.name = name
         self.item_list = []
+        self.progress = False
 
     def add_bucket_list_item(self, item_name, description):
         """Method for adding a new bucket list item """
@@ -19,7 +20,7 @@ class BucketList(object):
             if obj.name == name:
                 return obj
 
-    def edit_bucket_list_item(self, item_name , new_name, new_description , new_progress):
+    def edit_bucket_list_item(self, item_name , new_name, new_description, new_progress=False):
         """Method for editing a bucket list item"""
         for obj in self.item_list:
             if obj.name == item_name:
