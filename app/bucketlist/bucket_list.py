@@ -19,9 +19,14 @@ class BucketList(object):
             if obj.name == name:
                 return obj
 
-    def edit_bucket_list_item(self):
+    def edit_bucket_list_item(self, item_name , new_name, new_description , new_progress):
         """Method for editing a bucket list item"""
-        pass
+        for obj in self.item_list:
+            if obj.name == item_name:
+                obj.name = new_name
+                obj.description = new_description
+                obj.progress = new_progress
+                return obj
 
     def delete_bucket_list_item(self, name):
         """Method for deleting a bucket list item"""
