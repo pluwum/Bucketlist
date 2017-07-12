@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main_menu">
+    <ul>
+        <li>
+            <a class="btn btn-warning" href="/create_bucketlist">Add Bucket lists</a>
+        </li>
+        <li>
+            <a class="btn btn-warning"  href="/sign-out">Log Out</a>
+        </li>
+    </ul>
+</div>
+<div class="page-title">
+    Create Your Bucket list
+</div>
+<form action="/create_bucketlist" method="post" class="login">
+    <div>
+    </div>
+    <input type="text" name="bucket_list_name" placeholder="Enter The Bucket List Name">
+    <button class="btn btn-danger" type="submit">Create</button>
+</form>
+{% endblock %}
