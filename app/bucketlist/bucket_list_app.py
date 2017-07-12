@@ -18,6 +18,7 @@ class BucketListApp(object):
         for obj in self.list_of_users:
             if obj.email == email and obj.password == password:
                 self.current_user = obj
+                return True
             return 'Invalid Login Details'
 
     def sign_out(self):
