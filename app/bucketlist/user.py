@@ -1,4 +1,4 @@
-from ..classes.bucket_list import BucketList
+from ..bucketlist.bucket_list import BucketList
 
 
 class User(object):

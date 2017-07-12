@@ -1,5 +1,5 @@
 import unittest
-from ..classes.item import Item
+from ..bucketlist.item import Item
 
 
 class ItemTestCases(unittest.TestCase):

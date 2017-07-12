@@ -1,4 +1,4 @@
-from ..classes.item import Item
+from ..bucketlist.item import Item
 
 
 class BucketList(object):

@@ -1,4 +1,4 @@
-from ..classes.user import User
+from ..bucketlist.user import User
 import unittest
 
 
