@@ -23,7 +23,7 @@ class User(object):
             if obj.name == bucket_list_name:
                 return obj
 
-    def edit_bucket_list(self, bucket_list_name, new_bucket_list_name, new_progress = False):
+    def edit_bucket_list(self, bucket_list_name, new_bucket_list_name, new_progress=False):
         """Method for editing the bucket list"""
         for obj in self.bucket_lists:
             if obj.name == bucket_list_name:
@@ -36,5 +36,3 @@ class User(object):
         for obj in self.bucket_lists:
             if obj.name == bucket_list_name:
                 self.bucket_lists.remove(obj)
-
-

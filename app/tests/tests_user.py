@@ -1,6 +1,6 @@
 """Module containing the User Class tests"""
-from ..bucketlist.user import User
 import unittest
+from ..bucketlist.user import User
 
 
 class UserTestCase(unittest.TestCase):
@@ -28,4 +28,5 @@ class UserTestCase(unittest.TestCase):
     def test_delete_bucket_list(self):
         """Test for deleting the bucket list"""
         self.example_user.delete_bucket_list('Programming')
-        self.assertEqual(len(self.example_user.bucket_lists), 0, msg="The bucket list was not deleted.")
+        self.assertEqual(len(self.example_user.bucket_lists), 0,
+                         msg="The bucket list was not deleted.")
