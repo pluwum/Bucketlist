@@ -31,4 +31,10 @@ class User(object):
                 obj.progress = new_progress
                 return obj
 
+    def delete_bucket_list(self, bucket_list_name):
+        """Method for deleting the bucket list"""
+        for obj in self.bucket_lists:
+            if obj.name == bucket_list_name:
+                self.bucket_lists.remove(obj)
+
 

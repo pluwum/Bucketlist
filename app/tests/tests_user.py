@@ -24,3 +24,8 @@ class UserTestCase(unittest.TestCase):
         """Test for editing a bucket list"""
         result = self.example_user.edit_bucket_list('Programming', 'Agriculture')
         self.assertEqual(result.name, 'Agriculture', msg="The bucket list was not edited")
+
+    def test_delete_bucket_list(self):
+        """Test for deleting the bucket list"""
+        self.example_user.delete_bucket_list('Programming')
+        self.assertEqual(len(self.example_user.bucket_lists), 0, msg="The bucket list was not deleted.")
