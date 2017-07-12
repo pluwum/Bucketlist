@@ -1,11 +1,12 @@
+"""Module containing the Bucket List Class"""
 from ..bucketlist.item import Item
 
 
 class BucketList(object):
-    item_list = []
-
+    """Class containing the Bucket List methods"""
     def __init__(self, name):
         self.name = name
+        self.item_list = []
 
     def add_bucket_list_item(self, item_name, description):
         item1 = Item(item_name, description)
