@@ -39,7 +39,7 @@ def register():
 def home():
     if not start_app.current_user:
         return redirect(url_for('login'))
-    elif len(start_app.current_user.bucket_lists) > 0:
+    elif start_app.current_user.bucket_lists:
         return render_template('home.html',
                                bucket_lists=start_app.current_user.bucket_lists)
     return render_template('home.html')
@@ -116,4 +116,14 @@ def edit_bucketlist_item(item_id):
         return render_template('bucketlist-item-edit.html',
                                item_details=start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list[item_id],
                                item_id=item_id)
+    return redirect(url_for('login'))
+
+
+@app.route('/delete_bucketlist/<int:blist_id>', methods=['GET'])
+def delete_bucketlist(blist_id):
+    if start_app.current_user:
+        bucket_list_name = start_app.current_user.bucket_lists[blist_id].name
+        start_app.current_user.delete_bucket_list(bucket_list_name)
+        return render_template('home.html',
+                               bucket_lists=start_app.current_user.bucket_lists)
     return redirect(url_for('login'))
