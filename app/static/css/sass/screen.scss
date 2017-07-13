@@ -6,9 +6,6 @@
 @import "compass/reset";
 
 body {
-    .hidden{
-        displsy: hidden;
-    }
 	background: url(img/background.jpg) no-repeat no-repeat;
 	position: relative;
 	/*************************************main menu***************************************/
@@ -68,6 +65,7 @@ body {
 		width: 65%;
 		margin: 20px auto;
 		border-radius: 10px;
+		overflow: scroll;
 		background: #fff;
 		height: 600px;
 		background: rgba(255, 255, 251, 0.81);
