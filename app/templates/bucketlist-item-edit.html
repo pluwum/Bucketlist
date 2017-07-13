@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main_menu">
+    <ul>
+        <li>
+            <a class="btn btn-warning"  href="/sign-out">Log Out</a>
+        </li>
+    </ul>
+</div>
+<div class="page-title">
+    Edit a Bucket List Item
+</div>
+<div>
+    <form action="/edit_bucketlist_item/{{ item_id }}" method="post" class="sign-up">
+        {% if item_details %}
+        Enter The Bucket List Item Name
+        <input name="name" id="name" type="text" value="{{ item_details.name }}" required><br>
+        Enter The Bucket List Item Description<br>
+        <textarea name="description"  type="text" required>{{ item_details.description }}</textarea>
+        <input type="submit" class="btn btn-danger">
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
