@@ -14,9 +14,18 @@ of keeping track of their dreams and goals.
 * Users can create. edit, view and delete bucket list
 * Users can create, edit, view and delete bucket list items.
 
+### ** Python Version **
+
+Python 3.6.1
+
 ## ** Installation **
 
 #### Step 1
+Install a  virtualenvwrapper
+A Virtual Environment is a tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them.
+To install  the virtualenvwrapper follow the link installing [Installing Virtual Environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+#### Step 2
 Clone Github repository
 
 ```
@@ -24,7 +33,7 @@ $ git clone https://github.com/freshprincekla/Bucketlist.git
 
 ```
 
-#### Step 2
+#### Step 3
 Install the required dependencies
 
 ```
