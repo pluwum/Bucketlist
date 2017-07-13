@@ -6,7 +6,9 @@
 @import "compass/reset";
 
 body {
-
+    .hidden{
+        displsy: hidden;
+    }
 	background: url(img/background.jpg) no-repeat no-repeat;
 	position: relative;
 	/*************************************main menu***************************************/
