@@ -18,17 +18,23 @@ of keeping track of their dreams and goals.
 
 # Step 1
 Clone Github repository
-...
+
+```
 $https://github.com/freshprincekla/Bucketlist.git
-...
+
+```
 
 # Step 2
 Install the required dependencies
-...
+
+```
 $pip install -r requirements.txt
-...
+
+```
 or
-...
+
+```
 $ pip install --upgrade -r requirements.txt
-...
+
+```
 
