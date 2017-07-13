@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="page-title">
+    Create a Bucket List Item
+</div>
+<div>
+    <form action="" method="post" class="sign-up">
+        <input name="name" type="text" placeholder="Enter The Bucket List Item Name" required>
+        <textarea name="description" placeholder="Enter The Bucket List Item Description" required>
+        </textarea>
+        <input type="submit" class="btn btn-danger">
+    </form>
+</div>
+{% endblock %}
