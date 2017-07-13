@@ -1,4 +1,4 @@
-## Bucket list Application using flask framework
+#### Bucket list Application using flask framework
 
 "The challenge of keeping track of dreams and goals is a need for many individuals that
 requires an innovative and robust solution that will allow them to remember and share
@@ -14,7 +14,7 @@ of keeping track of their dreams and goals.
 * Users can create. edit, view and delete bucket list
 * Users can create, edit, view and delete bucket list items.
 
-** Installation **
+### ** Installation **
 
 # Step 1
 Clone Github repository
