@@ -29,7 +29,7 @@ class User(object):
             if obj.name == bucket_list_name:
                 obj.name = new_bucket_list_name
                 obj.progress = new_progress
-                return obj
+
 
     def delete_bucket_list(self, bucket_list_name):
         """Method for deleting the bucket list"""
