@@ -1,11 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="main_menu">
+    <ul>
+        <li>
+            <a class="btn btn-warning"  href="/sign-out">Log Out</a>
+        </li>
+    </ul>
+</div>
 <div class="page-title">
     Create a Bucket List Item
 </div>
 <div>
-    <form action="" method="post" class="sign-up">
-        <input name="name" type="text" placeholder="Enter The Bucket List Item Name" required>
+    <form action="/create_bucketlist_item" method="post" class="sign-up">
+        <label for="name">Enter The Bucket List Item Name</label>
+        <input name="name" id="name" type="text"  required>
+        <input class="hidden" value="" name="blindex" type="text" ><br>
+        Enter The Bucket List Item Description<br>
         <textarea name="description" placeholder="Enter The Bucket List Item Description" required>
         </textarea>
         <input type="submit" class="btn btn-danger">

@@ -3,7 +3,10 @@
 <div class="main_menu">
     <ul>
         <li>
-            <a class="btn btn-warning" href="#">Add Bucket List Item</a>
+            <a class="btn btn-warning" href="/home">Home</a>
+        </li>
+        <li>
+            <a class="btn btn-warning" href="/create_bucketlist_item">Add Bucket List Item</a>
         </li>
         <li>
             <a class="btn btn-warning"  href="/sign-out">Log Out</a>
@@ -14,6 +17,7 @@
     Bucket List Items
 </div>
 <div class="table">
+    {% if users_buckets_items %}
     <table class="table table-hover">
         <thead>
         <tr>
@@ -24,13 +28,18 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+            <form action="#" methods="post">
+                {% for item in users_buckets_items %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td colspan="3">{{ item.description }}</td>
+                    </tr>
+                {% endfor %}
+            </form>
         </tbody>
     </table>
+    {% else %}
+        <div>No Bucket List Items Currently Existing. Please Create One.</div>
+    {% endif %}
 </div>
 {% endblock %}

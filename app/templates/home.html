@@ -24,10 +24,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <form action="" method="post">
-                        {% for name in bucket_lists %}
+                    <form action="/viewbucketlist" method="post">
+                        {% for blist in bucket_lists %}
                         <tr>
-                            <td><a href="viewbucketlist?bucketlistname={{ name }}">{{ name }}</a></td>
+                            <td><a href="{{url_for('viewbucketlist',blist_id=loop.index0)}}">{{ blist.name }}</a></td>
                         </tr>
                         {% endfor %}
                     </form>
@@ -37,6 +37,5 @@
                     <div>No Bucket Currently Existing. Please Create One.</div>
             {% endif %}
         </div>
-
 </div>
 {% endblock %}
