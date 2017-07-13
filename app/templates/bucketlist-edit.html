@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main_menu">
+    <ul>
+        <li>
+            <a class="btn btn-warning" href="/create_bucketlist">Add Bucket lists</a>
+        </li>
+        <li>
+            <a class="btn btn-warning"  href="/sign-out">Log Out</a>
+        </li>
+    </ul>
+</div>
+<div class="page-title">
+    Edit Your Bucket List Name
+</div>
+<form action="/edit_bucketlist/{{ blist_id }}" method="post" class="login">
+    {% if bucket_list_details %}
+        <input type="text" value="{{ bucket_list_details.name }}" name="bucket_list_name" required>
+        <button class="btn btn-danger" type="submit">Create</button>
+    {% endif %}
+</form>
+{% endblock %}
