@@ -20,7 +20,7 @@ of keeping track of their dreams and goals.
 Clone Github repository
 
 ```
-$https://github.com/freshprincekla/Bucketlist.git
+$ git clone https://github.com/freshprincekla/Bucketlist.git
 
 ```
 
@@ -28,7 +28,7 @@ $https://github.com/freshprincekla/Bucketlist.git
 Install the required dependencies
 
 ```
-$pip install -r requirements.txt
+$ pip install -r requirements.txt
 
 ```
 or
