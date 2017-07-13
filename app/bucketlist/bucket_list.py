@@ -27,7 +27,7 @@ class BucketList(object):
                 obj.name = new_name
                 obj.description = new_description
                 obj.progress = new_progress
-                return obj
+
 
     def delete_bucket_list_item(self, name):
         """Method for deleting a bucket list item"""
