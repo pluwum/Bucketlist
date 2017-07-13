@@ -30,7 +30,6 @@ class User(object):
                 obj.name = new_bucket_list_name
                 obj.progress = new_progress
 
-
     def delete_bucket_list(self, bucket_list_name):
         """Method for deleting the bucket list"""
         for obj in self.bucket_lists:
