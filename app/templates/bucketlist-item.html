@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="main_menu">
+    <ul>
+        <li>
+            <a class="btn btn-warning" href="#">Add Bucket List Item</a>
+        </li>
+        <li>
+            <a class="btn btn-warning"  href="/sign-out">Log Out</a>
+        </li>
+    </ul>
+</div>
+<div class="page-title">
+    Bucket List Items
+</div>
+<div class="table">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Short Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
