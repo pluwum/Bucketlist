@@ -30,7 +30,7 @@
                         {% for blist in bucket_lists %}
                         <tr>
                             <td><a href="{{url_for('viewbucketlist',blist_id=loop.index0)}}">{{ blist.name }}</a></td>
-                            <td><a class="btn btn-warning" href="#">Edit</a></td>
+                            <td><a class="btn btn-warning" href="{{url_for('edit_bucketlist', blist_id=loop.index0)}}">Edit</a></td>
                             <td><a class="btn btn-danger" href="{{url_for('delete_bucketlist', blist_id=loop.index0)}}">Delete</a></td>
                         </tr>
                         {% endfor %}

@@ -127,3 +127,16 @@ def delete_bucketlist(blist_id):
         return render_template('home.html',
                                bucket_lists=start_app.current_user.bucket_lists)
     return redirect(url_for('login'))
+
+
+@app.route('/edit_bucketlist/<int:blist_id>', methods=['GET', 'POST'])
+def edit_bucketlist(blist_id):
+    if start_app.current_user:
+        if request.method == 'POST':
+            bucket_list_name = start_app.current_user.bucket_lists[blist_id].name
+            new_bucketlist_name = request.form['bucket_list_name']
+            start_app.current_user.edit_bucket_list(bucket_list_name, new_bucketlist_name)
+            return redirect(url_for('home'))
+        return render_template('bucketlist-edit.html',
+                               bucket_list_details=start_app.current_user.bucket_lists[blist_id],
+                               blist_id=blist_id)
