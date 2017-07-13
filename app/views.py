@@ -1,8 +1,6 @@
 from flask import render_template, redirect, request, url_for
 from app import app
 from .bucketlist.bucket_list_app import BucketListApp
-from .bucketlist.bucket_list import BucketList
-from .bucketlist.bucket_list import Item
 
 start_app = BucketListApp()
 
@@ -49,7 +47,7 @@ def home():
 
 @app.route('/sign-out', methods=['GET'])
 def sign_out():
-    if start_app.current_user is not None:
+    if start_app.current_user:
         start_app.sign_out()
         return redirect(url_for('login'))
     return redirect(url_for('login'))
@@ -57,7 +55,7 @@ def sign_out():
 
 @app.route('/create_bucketlist', methods=['GET', 'POST'])
 def create_bucketlist():
-    if start_app.current_user is not None:
+    if start_app.current_user:
         if request.method == 'GET':
             return render_template('create-bucketlist.html')
         if request.method == 'POST':
@@ -71,7 +69,7 @@ def create_bucketlist():
 @app.route('/viewbucketlist/<int:blist_id>', methods=['GET'])
 def viewbucketlist(blist_id):
     start_app.current_bucketlist = blist_id
-    if start_app.current_user is not None:
+    if start_app.current_user:
         if start_app.current_user.bucket_lists[blist_id].item_list:
             return render_template('bucketlist-item.html',
                                    users_buckets_items=start_app.current_user.bucket_lists[blist_id].item_list)
@@ -83,7 +81,7 @@ def viewbucketlist(blist_id):
 
 @app.route('/create_bucketlist_item', methods=['GET', 'POST'])
 def create_bucketlist_item():
-    if start_app.current_user is not None:
+    if start_app.current_user:
         if request.method == 'GET':
             return render_template('create-bucketlist-item.html')
         if request.method == 'POST':
@@ -92,4 +90,30 @@ def create_bucketlist_item():
             start_app.current_user.bucket_lists[start_app.current_bucketlist].add_bucket_list_item(item_name, item_description)
             return render_template('bucketlist-item.html',
                                    users_buckets_items=start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list)
+    return redirect(url_for('login'))
+
+@app.route('/delete_item/<int:item_id>', methods=['GET'])
+def delete_bucketlist_item(item_id):
+    if start_app.current_user:
+        item_name = start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list[item_id].name
+        start_app.current_user.bucket_lists[start_app.current_bucketlist].delete_bucket_list_item(item_name)
+        return render_template('bucketlist-item.html',
+                               users_buckets_items=start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list)
+    return redirect(url_for('login'))
+
+
+@app.route('/edit_bucketlist_item/<int:item_id>', methods=['GET', 'POST'])
+def edit_bucketlist_item(item_id):
+    if start_app.current_user:
+        if request.method == 'POST':
+            new_item_name = request.form['name']
+            new_item_description = request.form['description']
+            item_name = start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list[item_id].name
+            start_app.current_user.bucket_lists[start_app.current_bucketlist].edit_bucket_list_item(item_name, new_item_name, new_item_description)
+            return render_template('bucketlist-item.html',
+                                   users_buckets_items=start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list,
+                                   item_id=item_id)
+        return render_template('bucketlist-item-edit.html',
+                               item_details=start_app.current_user.bucket_lists[start_app.current_bucketlist].item_list[item_id],
+                               item_id=item_id)
     return redirect(url_for('login'))
