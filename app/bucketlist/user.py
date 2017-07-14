@@ -13,25 +13,38 @@ class User(object):
         self.bucket_lists = []
 
     def add_new_bucket_list(self, bucket_list_name):
-        """Method for adding new bucketlist"""
+        """
+        Method for adding new bucketlist
+        params: bucket_list_name
+        """
         new_bucket_list = BucketList(bucket_list_name)
         self.bucket_lists.append(new_bucket_list)
 
     def view_bucket_list(self, bucket_list_name):
-        """Method for viewing  the bucket list"""
+        """
+        Method for viewing  the bucket list
+        params: bucket_list_name
+        return: object
+        """
         for obj in self.bucket_lists:
             if obj.name == bucket_list_name:
                 return obj
 
     def edit_bucket_list(self, bucket_list_name, new_bucket_list_name, new_progress=False):
-        """Method for editing the bucket list"""
+        """
+        Method for editing the bucket list
+        params: bucket_list_name, new_bucket_list_name, new_progress
+        """
         for obj in self.bucket_lists:
             if obj.name == bucket_list_name:
                 obj.name = new_bucket_list_name
                 obj.progress = new_progress
 
     def delete_bucket_list(self, bucket_list_name):
-        """Method for deleting the bucket list"""
+        """
+        Method for deleting the bucket list
+        params: bucket_list_name
+        """
         for obj in self.bucket_lists:
             if obj.name == bucket_list_name:
                 self.bucket_lists.remove(obj)
