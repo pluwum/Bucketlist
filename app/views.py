@@ -158,3 +158,7 @@ def edit_bucketlist(blist_id):
         return render_template('bucketlist-edit.html',
                                bucket_list_details=BLISTAPP.current_user.bucket_lists[blist_id],
                                blist_id=blist_id)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
