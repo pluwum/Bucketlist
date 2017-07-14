@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/freshprincekla/Bucketlist.svg?branch=master)](https://travis-ci.org/freshprincekla/Bucketlist)
 # Bucket list Application using flask framework
 
 "The challenge of keeping track of dreams and goals is a need for many individuals that
@@ -47,3 +48,18 @@ $ pip install --upgrade -r requirements.txt
 
 ```
 
+#### Step 5
+### Running the application
+Navigate to the root directory and and run the following command:
+
+```
+$ python run.py
+
+```
+
+The application can be found by entering the following url in your browser
+
+```
+http://127.0.0.1:5000/
+
+```
