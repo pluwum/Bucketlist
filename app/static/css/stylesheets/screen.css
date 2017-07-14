@@ -136,12 +136,13 @@ body .container {
   width: 65%;
   margin: 20px auto;
   border-radius: 10px;
-  overflow: scroll;
+  overflow: auto;
   background: #fff;
   height: 600px;
   background: rgba(255, 255, 251, 0.81);
   /***************************************login********************************************/
   /***********************************list of users***************************************/
+  /***********************************404 page*******************************************/
 }
 /* line 74, ../sass/screen.scss */
 body .container form {
@@ -163,18 +164,38 @@ body .container form input {
   width: 50%;
   margin: 10px;
 }
-/* line 93, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
+body .container .login-link {
+  font-size: 12px;
+  margin-top: 15px;
+}
+/* line 96, ../sass/screen.scss */
 body .container .page-title {
   font-size: 20px;
   padding: 20px 20px;
   font-weight: bold;
 }
-/* line 98, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 body .container .users {
   background: white;
   padding: 20px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 body .container .sign-up {
   margin: 30px auto;
+}
+/* line 110, ../sass/screen.scss */
+body .container .page-not-found {
+  text-align: center;
+  padding-top: 17%;
+  font-family: 'Lobster', cursive;
+}
+/* line 114, ../sass/screen.scss */
+body .container .page-not-found .icon {
+  background: url(img/bucket.png) no-repeat no-repeat;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-size: 100px;
+  margin: 0 auto;
 }

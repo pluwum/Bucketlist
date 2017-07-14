@@ -65,7 +65,7 @@ body {
 		width: 65%;
 		margin: 20px auto;
 		border-radius: 10px;
-		overflow: scroll;
+		overflow: auto;
 		background: #fff;
 		height: 600px;
 		background: rgba(255, 255, 251, 0.81);
@@ -88,7 +88,10 @@ body {
 				margin: 10px;
 			}
 		}
-		
+		.login-link {
+		    font-size: 12px;
+            margin-top: 15px;
+		}
 		/***********************************list of users***************************************/
 		.page-title {
 			font-size: 20px;
@@ -103,5 +106,19 @@ body {
 	    .sign-up {
 		    margin: 30px auto;
 		}
+		/***********************************404 page*******************************************/
+        .page-not-found {
+            text-align: center;
+            padding-top: 17%;
+            font-family: 'Lobster', cursive;
+            .icon {
+                background: url(img/bucket.png) no-repeat no-repeat;
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-size: 100px;
+                margin: 0 auto;
+            }
+        }
 	}
 }
